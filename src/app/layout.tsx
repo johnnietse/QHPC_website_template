@@ -9,6 +9,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { siteConfig } from "@/config/site";
 import { JsonLd } from "@/components/JsonLd";
 import { AEOData } from "@/components/AEOData";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-body",
@@ -141,6 +142,7 @@ export default function RootLayout({
             <main id="main-content" className="flex-1">{children}</main>
             <Footer />
             <ThemeToggle />
+            <Analytics />
           </Providers>
         </ThemeProvider>
       </body>
